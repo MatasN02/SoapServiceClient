@@ -1,0 +1,86 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package lt.eif.viko.m.nar.client.generated_classes;
+
+import jakarta.xml.ws.Service;
+import jakarta.xml.ws.WebEndpoint;
+import jakarta.xml.ws.WebServiceClient;
+import jakarta.xml.ws.WebServiceException;
+import jakarta.xml.ws.WebServiceFeature;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.xml.namespace.QName;
+
+@WebServiceClient(
+    name = "OrderPortService",
+    targetNamespace = "http://www.springframework.org/schema/web-services",
+    wsdlLocation = "http://localhost:8080/soapWs/orders.wsdl"
+)
+public class OrderPortService extends Service {
+    private static final URL ORDERPORTSERVICE_WSDL_LOCATION;
+    private static final WebServiceException ORDERPORTSERVICE_EXCEPTION;
+    private static final QName ORDERPORTSERVICE_QNAME = new QName("http://www.springframework.org/schema/web-services", "OrderServiceService");
+
+    public OrderPortService() {
+        super(__getWsdlLocation(), ORDERPORTSERVICE_QNAME);
+    }
+
+    public OrderPortService(WebServiceFeature... features) {
+        super(__getWsdlLocation(), ORDERPORTSERVICE_QNAME, features);
+    }
+
+    public OrderPortService(URL wsdlLocation) {
+        super(wsdlLocation, ORDERPORTSERVICE_QNAME);
+    }
+
+    public OrderPortService(URL wsdlLocation, WebServiceFeature... features) {
+        super(wsdlLocation, ORDERPORTSERVICE_QNAME, features);
+    }
+
+    public OrderPortService(URL wsdlLocation, QName serviceName) {
+        super(wsdlLocation, serviceName);
+    }
+
+    public OrderPortService(URL wsdlLocation, QName serviceName, WebServiceFeature... features) {
+        super(wsdlLocation, serviceName, features);
+    }
+
+    @WebEndpoint(
+        name = "OrderServiceSoap11"
+    )
+    public OrderPort getOrderPortSoap11() {
+        return (OrderPort)super.getPort(new QName("http://www.springframework.org/schema/web-services", "OrderServiceSoap11"), OrderPort.class);
+    }
+
+    @WebEndpoint(
+        name = "OrderServiceSoap11"
+    )
+    public OrderPort getOrderPortSoap11(WebServiceFeature... features) {
+        return (OrderPort)super.getPort(new QName("http://www.springframework.org/schema/web-services", "OrderServiceSoap11"), OrderPort.class, features);
+    }
+
+    private static URL __getWsdlLocation() {
+        if (ORDERPORTSERVICE_EXCEPTION != null) {
+            throw ORDERPORTSERVICE_EXCEPTION;
+        } else {
+            return ORDERPORTSERVICE_WSDL_LOCATION;
+        }
+    }
+
+    static {
+        URL url = null;
+        WebServiceException e = null;
+
+        try {
+            url = new URL("http://localhost:8080/soapWs/orders.wsdl");
+        } catch (MalformedURLException var3) {
+            e = new WebServiceException(var3);
+        }
+
+        ORDERPORTSERVICE_WSDL_LOCATION = url;
+        ORDERPORTSERVICE_EXCEPTION = e;
+    }
+}
