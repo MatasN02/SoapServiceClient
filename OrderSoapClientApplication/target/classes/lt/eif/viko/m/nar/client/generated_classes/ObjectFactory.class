@@ -1,0 +1,42 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package lt.eif.viko.m.nar.client.generated_classes;
+
+import jakarta.xml.bind.annotation.XmlRegistry;
+
+@XmlRegistry
+public class ObjectFactory {
+    public ObjectFactory() {
+    }
+
+    public GetAllTripResponse createGetAllTripResponse() {
+        return new GetAllTripResponse();
+    }
+
+    public GetAllTripRequest createGetAllTripRequest() {
+        return new GetAllTripRequest();
+    }
+
+    public GetOrderRequest createGetOrderRequest() {
+        return new GetOrderRequest();
+    }
+
+    public GetOrderResponse createGetOrderResponse() {
+        return new GetOrderResponse();
+    }
+
+    public Order createOrder() {
+        return new Order();
+    }
+
+    public Traveler createTraveler() {
+        return new Traveler();
+    }
+
+    public Trip createTrip() {
+        return new Trip();
+    }
+}
