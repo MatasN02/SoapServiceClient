@@ -1,0 +1,101 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package lt.eif.viko.m.nar.client.generated_classes;
+
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(
+    name = "order",
+    propOrder = {"id", "orderDate", "travelers", "trips"}
+)
+public class Order {
+    protected int id;
+    protected String orderDate;
+    @XmlElement(
+        nillable = true
+    )
+    protected List<Traveler> travelers;
+    @XmlElement(
+        nillable = true
+    )
+    protected List<Trip> trips;
+
+    public Order() {
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int value) {
+        this.id = value;
+    }
+
+    public String getOrderDate() {
+        return this.orderDate;
+    }
+
+    public void setOrderDate(String value) {
+        this.orderDate = value;
+    }
+
+    public List<Traveler> getTravelers() {
+        if (this.travelers == null) {
+            this.travelers = new ArrayList();
+        }
+
+        return this.travelers;
+    }
+
+    public void setTravelers(List<Traveler> travelers) {
+        this.travelers = travelers;
+    }
+
+    public List<Trip> getTrips() {
+        if (this.trips == null) {
+            this.trips = new ArrayList();
+        }
+
+        return this.trips;
+    }
+
+    public void setTrips(List<Trip> trips) {
+        this.trips = trips;
+    }
+
+    public String toString() {
+        return String.format("Order:\n\t Date = %s\n\tTravelers: \n\t%sTrips:\n\t\t%s", this.orderDate, this.travelers, this.trips, this.constructTravelerString(), this.constructTripString());
+    }
+
+    private String constructTravelerString() {
+        String resultTraveler = "";
+
+        Traveler traveler;
+        for(Iterator var2 = this.travelers.iterator(); var2.hasNext(); resultTraveler = resultTraveler + traveler.toString()) {
+            traveler = (Traveler)var2.next();
+        }
+
+        return resultTraveler;
+    }
+
+    private String constructTripString() {
+        String resultTrip = "";
+
+        Trip trip;
+        for(Iterator var2 = this.trips.iterator(); var2.hasNext(); resultTrip = resultTrip + trip.toString()) {
+            trip = (Trip)var2.next();
+        }
+
+        return resultTrip;
+    }
+}
